@@ -1,0 +1,445 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --Almost-White: hsl(0, 0%, 98%);
+  --Medium-Gray: hsl(0, 0%, 41%);
+  --Almost-Black: hsl(0, 0%, 8%);
+}
+
+html {
+  font-size: 18px;
+  font-family: "Epilogue", sans-serif;
+
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0px;
+  padding: 0px;
+
+  font-family: inherit;
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  shape-margin: 1rem;
+  font-style: italic;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+section,
+div,
+header,
+nav {
+  width: 100%;
+}
+
+.hidden {
+  height: 0 !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  transition: height 0.2s ease !important;
+}
+
+.hidden_menubar{
+  display: none !important;
+  margin-top: 0px !important;
+}
+
+.active {
+  color: var(--Almost-Black);
+  font-weight: 700;
+}
+
+.main {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  min-height: 100svh;
+  background-color: var(--Almost-White);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.content header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+header nav .navItems {
+  display: none;
+}
+
+header nav .overlay {
+  position: fixed;
+  right: -100%;
+  top: 0px;
+  min-width: 100%;
+  min-height: 100svh;
+  background-color: var(--Almost-Black);
+  opacity: 0.5;
+  z-index: 999;
+}
+
+header nav .menuBar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0px;
+  right: -100%;
+  z-index: 1000;
+  width: 250px;
+  height: 100svh;
+  padding: 20px;
+  gap: 20px;
+  background-color: var(--Almost-White);
+}
+
+.menuBar > img {
+  align-self: flex-end;
+}
+
+.menuBar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 30px;
+}
+
+.menuBar .menubar_options > li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+.menuBar ul li div {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+
+.menuBar .menubar_features {
+  padding-left: 40px;
+  margin-top: 10px;
+}
+
+.menuBar .menubar_features > li {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
+}
+
+.menuBar .menuButtons {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 10px;
+}
+
+.menuButtons button {
+  width: 100%;
+  padding: 15px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--Medium-Gray);
+  color: var(--Medium-Gray);
+  background-color: transparent;
+}
+
+.menuBar button:first-child {
+  border: none;
+  background-color: transparent;
+}
+
+.content .hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0px;
+  max-width: 500px;
+}
+
+.hero .heroImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.hero .heroText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
+}
+
+.heroText .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  text-align: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.text h1 {
+  color: var(--Almost-Black);
+  font-size: 2rem;
+}
+
+.text p {
+  color: var(--Medium-Gray);
+  line-height: 1.5rem;
+}
+
+.text button {
+  background-color: var(--Almost-Black);
+  color: var(--Almost-White);
+  padding: 15px 25px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.text button:hover {
+  cursor: pointer;
+  color: var(--Almost-Black);
+  border: 1px solid var(--Almost-Black);
+  background-color: transparent;
+}
+
+.heroText .clients {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.clients img {
+  width: 20%;
+}
+
+@media screen and (min-width: 850px) {
+  .main {
+    align-items: stretch;
+    justify-content: center;
+  }
+
+  nav {
+    gap: 40px;
+  }
+
+  nav .menuBtn,
+  nav .overlay,
+  nav .menuBar {
+    display: none;
+  }
+
+  header nav .navItems {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navItems ul {
+    font-size: 0.8rem;
+    color: var(--Medium-Gray);
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 30px;
+    flex: 1 1 90%;
+  }
+
+  .navItems ul li {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 7px;
+    position: relative;
+  }
+
+  .navItems ul li ul {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400 !important;
+  }
+
+  .navItems ul li .features {
+    top: 30px;
+    right: 0px;
+    width: 140px;
+    height: 195px;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: height 0.2s ease;
+    -webkit-box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.03);
+    -moz-box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.03);
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.03);
+  }
+
+  .navItems ul li .features span {
+    margin-left: 10px;
+  }
+
+  .navItems ul li .company {
+    top: 30px;
+    left: 0px;
+    background-color: #fff;
+    width: 110px;
+    height: 140px;
+    border-radius: 10px;
+    transition: height 0.2s ease;
+    -webkit-box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.03);
+    -moz-box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.03);
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.03);
+  }
+
+  .navItems ul li .company li {
+    width: 100%;
+    padding-inline-start: 20px;
+  }
+
+  .navItems > ul li:hover {
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--Almost-Black);
+  }
+
+  .navItems .navBtn {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex: 1 1 10%;
+    gap: 10px;
+  }
+
+  .navBtn button {
+    padding: 10px 25px;
+    border: none;
+    color: var(--Medium-Gray);
+    background-color: transparent;
+  }
+
+  .navBtn button:nth-child(2) {
+    border-radius: 10px;
+    border: 1px solid var(--Medium-Gray);
+  }
+
+  .navBtn button:hover {
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--Almost-Black);
+  }
+
+  .navBtn button:nth-child(2):hover {
+    border: 1px solid var(--Almost-Black);
+  }
+
+  .content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    min-height: 100%;
+    max-width: 1400px;
+  }
+  .content .hero {
+    flex-direction: row-reverse;
+    align-items: end;
+    padding: 20px;
+    gap: 40px;
+    max-width: 940px;
+    height: fit-content;
+  }
+
+  .hero .heroImage,
+  .heroImage img {
+    align-self: stretch;
+  }
+
+  .hero .heroText {
+    justify-content: center;
+    gap: 100px;
+  }
+
+  .heroText .text {
+    align-items: start;
+    text-align: left;
+  }
+
+  .text h1 {
+    font-size: 3.2rem;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0%;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    right: 0%;
+  }
+  to {
+    right: -100%;
+  }
+}
+
+@keyframes rotateStart {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 180deg;
+  }
+}
+
+@keyframes rotateStop {
+  from {
+    rotate: 180deg;
+  }
+  to {
+    rotate: 0deg;
+  }
+}
+
+.slideIn {
+  animation: slideIn 0.3s 0.3s ease forwards;
+}
+
+.slideOut {
+  animation: slideOut 0.3s 0.3s ease forwards;
+}

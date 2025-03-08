@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  </head>
+  <body>
+    <main class="main">
+      <section class="content">
+        <header>
+          <nav>
+            <img src="./images/logo.svg" alt="companyLogo" />
+            <img
+              src="./images/icon-menu.svg"
+              alt="menuButton"
+              class="menuBtn"
+            />
+
+            <div class="navItems">
+              <ul>
+                <li>
+                  <span class="featuresDrop">Features</span>
+                  <svg
+                    class="arrow"
+                    width="10"
+                    height="6"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke="#686868"
+                      stroke-width="1.5"
+                      fill="none"
+                      d="m1 1 4 4 4-4"
+                    />
+                  </svg>
+                  <ul class="features hidden">
+                    <li>
+                      <img src="./images/icon-todo.svg" alt="" /><span
+                        >Todo List</span
+                      >
+                    </li>
+                    <li>
+                      <img src="./images/icon-calendar.svg" alt="" /><span
+                        >Calnedar</span
+                      >
+                    </li>
+                    <li>
+                      <img src="./images/icon-reminders.svg" alt="" /><span
+                        >Reminder</span
+                      >
+                    </li>
+                    <li>
+                      <img src="./images/icon-planning.svg" alt="" /><span
+                        >Planning</span
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="companyDrop">Company</span>
+                  <svg
+                    class="arrow"
+                    width="10"
+                    height="6"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke="#686868"
+                      stroke-width="1.5"
+                      fill="none"
+                      d="m1 1 4 4 4-4"
+                    />
+                  </svg>
+                  <ul class="company hidden">
+                    <li>History</li>
+                    <li>Our Team</li>
+                    <li>Blog</li>
+                  </ul>
+                </li>
+                <li>Careers</li>
+                <li>About</li>
+              </ul>
+
+              <div class="navBtn">
+                <button>Login</button>
+                <button>Register</button>
+              </div>
+            </div>
+
+            <div class="overlay"></div>
+            <section class="menuBar">
+              <img
+                src="./images/icon-close-menu.svg"
+                alt="menuCloseButton"
+                class="menuCloseBtn"
+              />
+
+              <ul class="menubar_options">
+                <li class="menubar_options_features">
+                  <div>
+                    <span>Features</span>
+                    <img src="./images/icon-arrow-down.svg" alt="arrowDown" />
+                  </div>
+
+                  <ul class="menubar_features hidden_menubar">
+                    <li>
+                      <img src="./images/icon-todo.svg" alt="" /><span
+                        >Todo List</span
+                      >
+                    </li>
+                    <li>
+                      <img src="./images/icon-calendar.svg" alt="" /><span
+                        >Calnedar</span
+                      >
+                    </li>
+                    <li>
+                      <img src="./images/icon-reminders.svg" alt="" /><span
+                        >Reminder</span
+                      >
+                    </li>
+                    <li>
+                      <img src="./images/icon-planning.svg" alt="" /><span
+                        >Planning</span
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="menubar_options_company">
+                  <div>
+                    <span>Company</span>
+                    <img src="./images/icon-arrow-down.svg" alt="arrowDown" />
+                  </div>
+                  <ul class="menubar_features hidden_menubar">
+                    <li>History</li>
+                    <li>Our Team</li>
+                    <li>Blog</li>
+                  </ul>
+                </li>
+                <li>Careers</li>
+                <li>About</li>
+              </ul>
+
+              <div class="menuButtons">
+                <button>Login</button>
+                <button>Register</button>
+              </div>
+            </section>
+          </nav>
+        </header>
+
+        <section class="hero">
+          <picture class="heroImage">
+            <source
+              srcset="./images/image-hero-desktop.png"
+              media="(min-width: 850px)"
+            />
+            <img src="./images/image-hero-mobile.png" alt="heroImage" />
+          </picture>
+
+          <section class="heroText">
+            <div class="text">
+              <h1>Make remote work</h1>
+              <p>
+                Get your team in sync, no matter your location. Streamline
+                processes, create team rituals, and watch productivity soar.
+              </p>
+              <button>Learn more</button>
+            </div>
+
+            <div class="clients">
+              <img src="./images/client-databiz.svg" alt="clientDatabiz" />
+              <img
+                src="./images/client-audiophile.svg"
+                alt="clientAudiophile"
+              />
+              <img src="./images/client-meet.svg" alt="clientMeet" />
+              <img src="./images/client-maker.svg" alt="clientMaker" />
+            </div>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
